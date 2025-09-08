@@ -55,7 +55,7 @@ Uploading AR Component Pro AI-Powered AR Analysis video (1).mp4…
 
 2. **Configure the Application**:
    - The API key is already configured in `script.js`
-   - Or replace `AIzaSyDQO1GCzWENmq9tW48mZqFOhglb5tkC0uc` with your own key
+   - replace `` with your own key
 
 3. **Run the Application**:
    ```bash
@@ -77,6 +77,7 @@ Uploading AR Component Pro AI-Powered AR Analysis video (1).mp4…
    export GEMINI_API_KEY="your_api_key_here"
    ```
    Or create a `.env` file with `GEMINI_API_KEY=your_api_key_here`
+
 
 3. **Run the Backend**:
    ```bash
@@ -174,4 +175,5 @@ To modify the application:
 ## License
 
 This project is created for the Nano Banana competition and is available under MIT License.
+
 
