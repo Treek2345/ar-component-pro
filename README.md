@@ -8,6 +8,15 @@
   <strong>A revolutionary web application that uses Gemini 2.5 Flash Image Preview to provide true augmented reality overlays for identifying and analyzing components in circuit boards and engineering parts. Experience AR-like component detection with real-time camera integration!</strong>
 </p>
 
+## 🎬 Demo Video
+
+<video width="100%" controls poster="logo.png">
+  <source src="AR Component Pro AI-Powered AR Analysis video (1).mp4" type="video/mp4">
+  <a href="AR Component Pro AI-Powered AR Analysis video (1).mp4">📥 Download Demo Video</a>
+</video>
+
+*Competition demo video - Shows AR Component Pro in action!*
+
 ## 🚀 Key Features
 
 - **📷 Dual Mode Operation**: Image analysis + Live AR camera mode
