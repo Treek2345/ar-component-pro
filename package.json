@@ -1,0 +1,27 @@
+{
+  "name": "smart-component-identifier",
+  "version": "1.0.0",
+  "description": "AR-powered engineering component identification using Nano Banana",
+  "main": "script.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "backend": "python backend.py"
+  },
+  "dependencies": {
+    "@google/genai": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "keywords": [
+    "ar",
+    "ai",
+    "engineering",
+    "nano-banana",
+    "gemini",
+    "computer-vision"
+  ],
+  "author": "Nano Banana Competition",
+  "license": "MIT"
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Component Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="AR Component Pro Logo" class="app-logo">
+                    <div>
+                        <h1>AR Component Pro</h1>
+                        <p>AR-powered engineering component identification and analysis</p>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    🌙 Dark Mode
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="mode-selector">
+                <button id="imageMode" class="mode-btn active" aria-label="Switch to image analysis mode" aria-pressed="true">📷 Image Analysis</button>
+                <button id="arMode" class="mode-btn" aria-label="Switch to AR camera overlay mode" aria-pressed="false">📱 AR Overlay</button>
+            </div>
+
+            <div class="api-key-section">
+                <h3>🔑 Gemini API Setup</h3>
+                <p>Get started with your free Gemini API key:</p>
+                <div class="api-key-input-group">
+                    <input type="password" id="apiKeyInput" placeholder="Enter your Gemini API key..." aria-label="Gemini API key input" />
+                    <button id="saveApiKey" class="api-key-btn" aria-label="Save API key">Save Key</button>
+                </div>
+                <div class="api-key-help">
+                    <p>🔗 <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Get Free API Key Here</a></p>
+                    <p><small>No credit card required • 500 requests/day free • Key stored locally only</small></p>
+                </div>
+                <div id="apiKeyStatus" class="api-key-status" aria-live="polite"></div>
+            </div>
+
+            <div class="upload-section">
+                <input type="file" id="imageInput" accept="image/*" aria-label="Upload engineering image">
+                <label for="imageInput" class="upload-btn" aria-label="Choose image file">Choose Image</label>
+                <button id="cameraBtn" class="camera-btn" aria-label="Open camera for live AR">📹 Open Camera</button>
+                <div id="fileName" aria-live="polite"></div>
+            </div>
+
+            <div class="query-section">
+                <label for="queryInput">What would you like to know about this image?</label>
+                <textarea id="queryInput" aria-label="Enter your question about the engineering image" placeholder="e.g., What are the main components on this motherboard?&#10;e.g., Show me the power supply connections&#10;e.g., Identify the sensors in this assembly" rows="3"></textarea>
+                <div class="query-suggestions">
+                    <span>💡 Smart Analysis Suggestions:</span>
+                    <button class="suggestion-btn" data-query="What is this device and how does it work?">🔍 What is this device?</button>
+                    <button class="suggestion-btn" data-query="Identify the key components and their functions">🔧 Key components & functions</button>
+                    <button class="suggestion-btn" data-query="How does this device operate?">⚙️ How does it work?</button>
+                    <button class="suggestion-btn" data-query="What materials is it constructed from?">🔬 Materials & construction</button>
+                    <button class="suggestion-btn" data-query="What are the technical specifications?">📊 Technical specifications</button>
+                    <button class="suggestion-btn" data-query="How would you repair or maintain this?">🛠️ Repair & maintenance</button>
+                </div>
+                <button id="analyzeBtn" class="analyze-btn" aria-label="Generate AR overlay with Nano Banana">🔍 Generate AR Overlay</button>
+            </div>
+
+            <div class="image-section">
+                <div class="canvas-container">
+                    <video id="videoElement" class="hidden"></video>
+                    <canvas id="imageCanvas"></canvas>
+                    <canvas id="overlayCanvas" class="overlay-canvas"></canvas>
+                </div>
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p id="loadingText">Analyzing image...</p>
+                </div>
+                <div class="ar-controls hidden">
+                    <button id="captureBtn" class="capture-btn">📸 Capture & Analyze</button>
+                    <button id="stopCameraBtn" class="stop-btn">⏹️ Stop Camera</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2 id="resultsTitle">Identified Components</h2>
+                <div id="componentsList"></div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import { GoogleGenAI } from 'https://esm.sh/@google/genai@latest';
+        window.GoogleGenAI = GoogleGenAI;
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
