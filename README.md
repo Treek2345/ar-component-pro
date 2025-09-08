@@ -15,7 +15,18 @@
   <a href="AR Component Pro AI-Powered AR Analysis video (1).mp4">📥 Download Demo Video</a>
 </video>
 
+
+https://github.com/user-attachments/assets/31929604-fc31-45ca-990e-5922ffe0ad00
+
+
+
 *Competition demo video - Shows AR Component Pro in action!*
+
+
+Uploading AR Component Pro AI-Powered AR Analysis video (1).mp4…
+
+
+
 
 ## 🚀 Key Features
 
@@ -163,3 +174,4 @@ To modify the application:
 ## License
 
 This project is created for the Nano Banana competition and is available under MIT License.
+
